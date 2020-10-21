@@ -12,9 +12,44 @@ function Home({datos}) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          APi de <a href="https://nextjs.org">Alandina.com</a>
         </h1>
-
+        <h4>Productos Agroindustrias</h4>
+        <div className={styles.grid}>
+          {datos[0].map(artigo =>(
+            <a key={artigo.id} href="#!" className={styles.card}>
+              <figure className={styles.imgproducto}>
+                <img src={artigo.image}/>
+              </figure>
+              <h3>{artigo.name}</h3>
+              <p className={styles.descripcion}>{artigo.description}</p>
+            </a>
+          ))}
+        </div>
+        <h4>Productos Confeccion</h4>
+        <div className={styles.grid}>
+          {datos[1].map(artigo =>(
+            <a key={artigo.id} href="#!" className={styles.card}>
+              <figure className={styles.imgproducto}>
+                <img src={artigo.image}/>
+              </figure>
+              <h3>{artigo.name}</h3>
+              <p className={styles.descripcion}>{artigo.description}</p>
+            </a>
+          ))}
+        </div>
+        <h4>Productos Agricultura</h4>
+        <div className={styles.grid}>
+          {datos[2].map(artigo =>(
+            <a key={artigo.id} href="#!" className={styles.card}>
+              <figure className={styles.imgproducto}>
+                <img src={artigo.image}/>
+              </figure>
+              <h3>{artigo.name}</h3>
+              <p className={styles.descripcion}>{artigo.description}</p>
+            </a>
+          ))}
+        </div>
       </main>
     </div>
   )
